@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html ng-app="iceApp">
+<head>
+  <meta charset="utf-8">
+  <title>RINKS</title>
+  <link rel="stylesheet" href="stylesheets/bootstrap.min.css">
+  <link rel="stylesheet" href="stylesheets/index.css">
+  <!-- <script src="vendor/angular/angular.min.js"></script> -->
+  <script src="vendor/jquery/dist/jquery.min.js"></script>
+  <script src="assets/scripts/client.min.js"></script>
+</head>
+<body class="container">
+<div class="jumbotron">
+
+
+
+  <h1>RINKS</h1>
+
+  <h2>Login to Site</h2>
+  <form id="loginForm" action="/login" method="POST">
+
+
+  <label for="username">Username:</label>
+  <input type ="text" name="username" id="username" />
+
+  <label for="password">Password:</label>
+  <input type="password" name="password" id="password" />
+
+  <input type="submit"/>
+
+  <a href="/auth/facebook">Login with Facebook</a>
+  </form>
+  <div>
+
+
+    <a href="/register">Register Here</a>
+</div>
+
+<!-- <div class="btn-group">
+  <button type="button" class="btn btn-default"><a href="#">Home</a></button>
+  <button type="button" class="btn btn-default"><a href="/rinkInfo">Rink Information</a></button>
+</div> -->
+</div>
+
+<div class="row main well" >
+
+<div class="col-md-8 col-md-offset-2">
+  <h2>Find more info on your favorite MN ice arena</h2>
+  <img src="http://winsol.com/arena.jpg" class="img-circle img-responsive" />
+  <p>
+    Rinks is a great source of information ice arenas in the state of MN.
+    Here you can find location, concession information, reviews and even a rating on
+    how cold it is for spectators.
+  </p>
+</div>
+</div>
+</body>
+</html>

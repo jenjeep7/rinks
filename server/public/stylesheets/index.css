@@ -1,0 +1,29 @@
+.container{
+    background-color:rgb(37, 37, 37);
+}
+.jumbotron {
+  text-align: center;
+  background-image: url('http://66.media.tumblr.com/23a28cc549309289b875546ace610238/tumblr_njctinNiJQ1rwh0pyo1_1280.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.main {
+color: white;
+background-color: rgb(48, 48, 48);
+}
+h2{
+  margin-bottom: 30px;
+  color: rgb(171, 171, 171);
+}
+
+p {
+  margin-top: 30px;
+  color: white;
+}
+label {
+  color: white;
+}
+input {
+  color: black;
+}
