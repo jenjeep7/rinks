@@ -1,9 +1,36 @@
 
 
 
-var app = angular.module('iceApp', []);
+var app = angular.module('iceApp', ['ngRoute']);
 
+app.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider){
+  $routeProvider
+    .when('/home', {
+      templateUrl: 'views/home.html',
 
+    })
+    .when('/register', {
+      templateUrl: 'views/register.html',
+    })
+    .when('/newReviews', {
+      templateUrl: 'views/newReviews.html',
+      controller: 'ReviewController',
+      controllerAs: 'rc'
+    })
+    .when('/reviews', {
+      templateUrl: 'views/reviews.html',
+      controller: 'ReviewController',
+      controllerAs: 'rc'
+    })
+    .when('/rinkInfo', {
+      templateUrl: 'views/rinkInfo.html',
+      controller: 'SearchController',
+      controllerAs: 'sc'
+    });
+
+  $locationProvider.html5Mode(true);
+
+}]);
 
 //controller for reviews
 app.controller('ReviewController', ['$http', function($http){

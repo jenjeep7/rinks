@@ -8,8 +8,10 @@
   <link rel="stylesheet" href="stylesheets/bootstrap.min.css">
   <link rel="stylesheet" href="stylesheets/index.css">
   <script src="vendor/angular/angular.min.js"></script>
+  <script src="vendor/angular-route/angular-route.min.js"></script>
 
   <script src="assets/scripts/client.min.js"></script>
+  <base href="/" />
 </head>
 <body class="container">
   <div class="jumbotron">
@@ -22,45 +24,52 @@
     <a href="#" data-toggle="modal" data-target="#login-modal" class="login">Login</a>
 
     <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
-        	  <div class="modal-dialog">
-    				<div class="loginmodal-container">
-    					<h2>Login to Your Account</h2><br>
-    				  <form action="/login" method="POST">
-    					<input type="text" name="username" placeholder="Username" id="username">
-    					<input type="password" name="password" id ="password" placeholder="Password">
-    					<input type="submit" name="login" class="login loginmodal-submit" value="Login">
-    				  </form>
+      <div class="modal-dialog">
+        <div class="loginmodal-container">
+          <h2>Login to Your Account</h2><br>
+          <form action="/login" method="POST">
+            <input type="text" name="username" placeholder="Username" id="username">
+            <input type="password" name="password" id ="password" placeholder="Password">
+            <input type="submit" name="login" class="login loginmodal-submit" value="Login">
+          </form>
 
-    				  <div class="login-help">
-    					<a href="/register">Register</a>
-    				</div>
-    			</div>
-    		  </div>
+          <div class="login-help">
+            <a href="/register">Register</a>
+          </div>
+        </div>
+      </div>
 
+      <div>
+        <a href="/register">Register Here</a>
+      </div>
 
-
-<div>
-    <a href="/register">Register Here</a>
+    </div>
   </div>
 
-  <!-- <div class="btn-group">
-  <button type="button" class="btn btn-default"><a href="#">Home</a></button>
-  <button type="button" class="btn btn-default"><a href="/rinkInfo">Rink Information</a></button>
-</div> -->
-</div>
-</div>
-<div class="row main well" >
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <ul class="nav navbar-nav">
+        <li>
+          <a href="/home">Home</a>
+        </li>
+        <li>
+          <a href="/rinkInfo">Rink Information</a>
+        </li>
+        <li>
+          <a href="/newReviews">Post a Review</a>
+        </li>
+        <li>
+          <a href="/register">Register Here</a>
+        </li>
+        <li>
+          <a href="/rinkReview">Get Review</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div ng-view>
 
-  <div class="col-md-8 col-md-offset-2">
-    <h2>Find more info on your favorite MN ice arena</h2>
-    <img src="http://winsol.com/arena.jpg" class="img-circle img-responsive" />
-    <p>
-      Rinks is a great source of information ice arenas in the state of MN.
-      Here you can find location, concession information, reviews and even a rating on
-      how cold it is for spectators.
-    </p>
   </div>
-</div>
 </body>
 
 </html>

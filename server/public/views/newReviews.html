@@ -1,16 +1,6 @@
 <!DOCTYPE html>
-<html ng-app="iceApp">
-  <head>
-    <meta charset="utf-8">
-    <title>Add Rink Review</title>
-    <link rel="stylesheet" href="stylesheets/bootstrap.min.css">
-    <link rel="stylesheet" href="stylesheets/index.css">
-    <script src="vendor/angular/angular.min.js"></script>
-    <script src="vendor/jquery/dist/jquery.min.js"></script>
-    <script src="assets/scripts/client.min.js"></script>
-  </head>
   <body ng-controller="ReviewController" class="container main">
-    <form method="POST" action="/newReviews">
+    <form method="POST" action="/postReview">
 
 
 <label for="review">Enter your review:</label>
@@ -24,4 +14,3 @@
 <input type="submit" />
   </form>
   </body>
-</html>

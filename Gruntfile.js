@@ -29,7 +29,8 @@ module.exports = function(grunt) {
             'angular/angular.min.js',
             'angular/angular.min.js.map',
             'angular/angular-csp.css',
-            'jquery/dist/jquery.min.js'
+            'jquery/dist/jquery.min.js',
+            'angular-route/angular-route.min.js'
           ],
           dest: 'server/public/vendor/'},
 

@@ -1,51 +1,24 @@
 <!DOCTYPE html>
-<html ng-app="iceApp">
-  <head>
-    <meta charset="utf-8">
-    <title>Registration</title>
-    <link rel="stylesheet" href="stylesheets/bootstrap.min.css">
-    <link rel="stylesheet" href="stylesheets/index.css">
-    <script src="vendor/angular/angular.min.js"></script>
-    <script src="vendor/jquery/dist/jquery.min.js"></script>
-    <script src="assets/scripts/client.min.js"></script>
-  </head>
-  <body  class="container">
-    <div class="jumbotron">
-
-
-    <h1>RINKS</h1>
-
-
-
-
-    <div class="btn-group">
-    <button type="button" class="btn btn-default"><a href="/">Home</a></button>
-    <button type="button" class="btn btn-default"><a href="/rinkInfo">Rink Information</a></button>
-    </div>
-</div>
 <div class="row main well">
 
 
-<div class="col-md-6 col-md-offset-3 main">
+  <div class="col-md-6 col-md-offset-3 main">
 
 
-<h2>Register for MN Ice Arena Website</h2>
+    <h2>Register for MN Ice Arena Website</h2>
 
-<form action="/register" method="POST">
-  <div>
+    <form action="/register" method="POST">
+      <div>
 
-  <label for="username">Enter a Username:</label>
-  <input type="text" name="username" id="username" />
+        <label for="username">Enter a Username:</label>
+        <input type="text" name="username" id="username" />
 
-  <label for="password">Enter a Password:</label>
-  <input type="password" name="password" id="password" />
+        <label for="password">Enter a Password:</label>
+        <input type="password" name="password" id="password" />
 
-  <input type="submit"/>
+        <input type="submit"/>
+      </div>
+
+    </form>
   </div>
-
-</form>
 </div>
-</div>
-
-  </body>
-</html>

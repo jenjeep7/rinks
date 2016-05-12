@@ -1,27 +1,4 @@
 <!DOCTYPE html>
-<html ng-app="iceApp">
-<head>
-  <meta charset="utf-8">
-  <title>Rink Info</title>
-  <link rel="stylesheet" href="stylesheets/bootstrap.min.css">
-  <link rel="stylesheet" href="stylesheets/index.css">
-  <script src="vendor/bootstrap/modal.js"></script>
-  <script src="vendor/angular/angular.min.js"></script>
-  <script src="vendor/jquery/dist/jquery.min.js"></script>
-  <script src="assets/scripts/client.min.js"></script>
-</head>
-<body class="container" ng-controller="SearchController as sc">
-  <div class="jumbotron">
-    <h1>Rinks</h1>
-
-  <div class="btn-group">
-    <button type="button" class="btn btn-default"><a href="/">Home</a></button>
-    <div>
-      <a href="/logout">Logout</a>
-    </div>
-
-  </div>
-  </div>
   <div class="row">
     <div class="col-md-6 col-md-offset-3">
       <!-- <form action="/rinks" method="get"> -->
@@ -48,15 +25,7 @@
         {{rink.address}}
         {{rink.city}},  {{rink.state}} {{rink.zip_code}}
       </p>
-      <button ng-click="/getReviews">Get Reviews</button>
+      <button><a href="/reviews">Get Reviews</a></button>
 
 <!-- <a href="/reviews" onclick="javascript:void window.open('/reviews','1462889355737','width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');return false;">Click here for reviews of {{rink.name}}</a> -->
     </div>
-
-
-
-
-  </div>
-</div>
-</body>
-</html>
