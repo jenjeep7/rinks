@@ -38,7 +38,7 @@ module.exports = function(grunt) {
 
           // bootstrap js
           {expand: true, cwd: 'node_modules/bootstrap/dist/js/', src: ['bootstrap.min.js'], dest: 'server/public/vendor/bootstrap/'},
-
+          {expand: true, cwd: 'node_modules/bootstrap/js/', src: ['modal.js'], dest: 'server/public/vendor/bootstrap/'},
           // bootstrap fonts
           {expand: true, cwd: 'node_modules/bootstrap/dist/fonts/', src: ['**'], dest: 'server/public/fonts/'}
 

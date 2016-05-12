@@ -7,6 +7,8 @@ var connectionString = require ('../db/connection').connectionString;
 
 router.get('/', function(req, res){
   console.log('review retrieval working');
+  var rink_id = {};
+  console.log(rink_id);
   pg.connect(connectionString, function(err, client, done){
     if(err){
 

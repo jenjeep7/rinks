@@ -5,12 +5,15 @@
     <title>Rink Reviews</title>
     <link rel="stylesheet" href="stylesheets/bootstrap.min.css">
     <link rel="stylesheet" href="stylesheets/index.css">
-    <!-- <script src="vendor/angular/angular.min.js"></script> -->
+    <script src="vendor/angular/angular.min.js"></script>
     <script src="vendor/jquery/dist/jquery.min.js"></script>
     <script src="assets/scripts/client.min.js"></script>
   </head>
-  <body ng-controller="ReviewController">
-
-
-  </body>
+  <body ng-controller="ReviewController as rc" class="container main">
+<a href="/newReviews">Post a new review</a>
+<!-- {{rc.allReviews.review}} -->
+<div ng-repeat="review in rc.allReviews">
+{{review.review}}
+</div>
+  </body> 
 </html>

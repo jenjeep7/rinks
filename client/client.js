@@ -7,19 +7,19 @@ var app = angular.module('iceApp', []);
 
 //controller for reviews
 app.controller('ReviewController', ['$http', function($http){
+
 var rc = this;
 rc.allReviews = {};
-
-  vm.getReviews= function(){
-
-    $http.get("/reviews").then(function(response){
+  rc.getReviews= function(){
+console.log("reviews was called");
+    $http.get("/getReviews").then(function(response){
       console.log("received reviews");
       rc.allReviews= response.data;
-
+      console.log(rc.allReviews);
     });
-    return vm.allReviews;
+
   };
-  vm.getReviews();
+  rc.getReviews();
 
 
 

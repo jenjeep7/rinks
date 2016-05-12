@@ -6,7 +6,7 @@ var connectionString = require ('../db/connection').connectionString;
 
 
 router.get('/:city', function(req, res){
-  console.log('rink_infosearch working');
+  console.log('rink info search working');
   var city = req.params.city;
   console.log(city);
   pg.connect(connectionString, function(err, client, done){

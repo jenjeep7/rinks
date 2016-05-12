@@ -8,6 +8,8 @@ var register=require('./register');
 var rink_info = require('./rink_info');
 var rinks = require('./rinks');
 var login = require('./login');
+var getReviews = require('./getReviews');
+var newReviews = require('./newReviews');
 var connectionString = 'postgres://localhost:5432/ice_arenas';
 // var initializeDB = require('./db/connection').initializeDB;
 router.get('/', function(request, response) {
@@ -15,6 +17,9 @@ router.get('/', function(request, response) {
 });
 router.get('/register', function(request, response){
   response.sendFile(path.join(__dirname, '../public/views/register.html'));
+});
+router.get('/newReviews', function(request, response){
+  response.sendFile(path.join(__dirname, '../public/views/newReviews.html'));
 });
 router.get('/rinkInfo', function(request, response){
   response.sendFile(path.join(__dirname, '../public/views/rinkInfo.html'));
@@ -40,6 +45,8 @@ router.use('/register', register);
 router.use('/rinks', rinks);
 router.use('/login', login);
 router.use('/rink_info', rink_info);
+router.use('/getReviews', getReviews);
+router.use('/newReviews', newReviews);
 // router.use('/failure');
 
 module.exports = router;

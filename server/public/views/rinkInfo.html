@@ -5,13 +5,14 @@
   <title>Rink Info</title>
   <link rel="stylesheet" href="stylesheets/bootstrap.min.css">
   <link rel="stylesheet" href="stylesheets/index.css">
+  <script src="vendor/bootstrap/modal.js"></script>
   <script src="vendor/angular/angular.min.js"></script>
-  <!-- <script src="vendor/jquery/dist/jquery.min.js"></script> -->
+  <script src="vendor/jquery/dist/jquery.min.js"></script>
   <script src="assets/scripts/client.min.js"></script>
 </head>
 <body class="container" ng-controller="SearchController as sc">
   <div class="jumbotron">
-    <h1>MN Ice Arenas</h1>
+    <h1>Rinks</h1>
 
   <div class="btn-group">
     <button type="button" class="btn btn-default"><a href="/">Home</a></button>
@@ -47,14 +48,15 @@
         {{rink.address}}
         {{rink.city}},  {{rink.state}} {{rink.zip_code}}
       </p>
+      <button ng-click="/getReviews">Get Reviews</button>
 
-<a href="/reviews" onclick="javascript:void window.open('/reviews','1462889355737','width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');return false;">Click here for reviews of {{rink.name}}</a>
+<!-- <a href="/reviews" onclick="javascript:void window.open('/reviews','1462889355737','width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');return false;">Click here for reviews of {{rink.name}}</a> -->
     </div>
 
 
-    </div>
+
 
   </div>
-
+</div>
 </body>
 </html>
