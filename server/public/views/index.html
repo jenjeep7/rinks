@@ -20,56 +20,15 @@
 
     <h1>RINKS</h1>
 
+</div>
 
-    <a href="#" data-toggle="modal" data-target="#login-modal" class="login">Login</a>
 
-    <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
-      <div class="modal-dialog">
-        <div class="loginmodal-container">
-          <h2>Login to Your Account</h2><br>
-          <form action="/login" method="POST">
-            <input type="text" name="username" placeholder="Username" id="username">
-            <input type="password" name="password" id ="password" placeholder="Password">
-            <input type="submit" name="login" class="login loginmodal-submit" value="Login">
-          </form>
-
-          <div class="login-help">
-            <a href="/register">Register</a>
-          </div>
-        </div>
-      </div>
-
-      <div>
-        <a href="/register">Register Here</a>
-      </div>
+  <div ng-view class="main">
 
     </div>
-  </div>
 
-  <nav class="navbar navbar-default">
-    <div class="container">
-      <ul class="nav navbar-nav">
-        <li>
-          <a href="/home">Home</a>
-        </li>
-        <li>
-          <a href="/rinkInfo">Rink Information</a>
-        </li>
-        <li>
-          <a href="/newReviews">Post a Review</a>
-        </li>
-        <li>
-          <a href="/register">Register Here</a>
-        </li>
-        <li>
-          <a href="/rinkReview">Get Review</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-  <div ng-view>
 
-  </div>
 </body>
+
 
 </html>

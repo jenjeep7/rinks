@@ -1,16 +1,38 @@
 <!DOCTYPE html>
+<nav class="navbar navbar-default">
+  <div class="container">
+    <ul class="nav navbar-nav">
+
+      <li>
+        <a href="/rinkInfo">Rink Information</a>
+      </li>
+      <li>
+        <a href="/newReviews">Post a Review</a>
+      </li>
+
+      <li>
+        <a href="/">Logout</a>
+      </li>
+
+
+    </ul>
+  </div>
+</nav>
+<div class="container">
+
+
   <div class="row">
     <div class="col-md-6 col-md-offset-3">
       <!-- <form action="/rinks" method="get"> -->
 
 
-        <label for="search">Search for arena:</label>
-        <select ng-options="rink.city for rink in sc.rinks" ng-model="sc.selectedValue" ></select>
-        <!-- {{sc.rinks}} -->
-        <br />
-        <!-- {{sc.selectedValue}} -->
-        <!-- <input type="submit" /> -->
-        <button ng-click="sc.getRinkInfo()">Get Rink Info</button>
+      <label for="search">Search for arena:</label>
+      <select ng-options="rink.city for rink in sc.rinks" ng-model="sc.selectedValue.selectedCity" ></select>
+      <!-- {{sc.rinks}} -->
+      <br />
+      <!-- {{sc.selectedValue}} -->
+      <!-- <input type="submit" /> -->
+      <button ng-click="sc.getRinkInfo()">Get Rink Info</button>
       <!-- </form> -->
     </div>
   </div>
@@ -18,14 +40,16 @@
   <div class="row">
     <div class="col-md-6 col-md-offset-3">
       <!-- This is where the view is populated from the search results -->
-    <div ng-repeat="rink in sc.rinkDisplay">
-      <h2>{{rink.name}}</h2>
+      <div ng-repeat="rink in sc.rinkDisplay">
+        <h2>{{rink.name}}</h2>
 
-      <p>
-        {{rink.address}}
-        {{rink.city}},  {{rink.state}} {{rink.zip_code}}
-      </p>
-      <button><a href="/reviews">Get Reviews</a></button>
+        <p>
+          {{rink.address}}
+          {{rink.city}},  {{rink.state}} {{rink.zip_code}}
+        </p>
+        <button><a href="/reviews">Get Reviews</a></button>
 
-<!-- <a href="/reviews" onclick="javascript:void window.open('/reviews','1462889355737','width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');return false;">Click here for reviews of {{rink.name}}</a> -->
+      </div>
     </div>
+  </div>
+</div>

@@ -96,6 +96,7 @@
 .login-help{
   font-size: 12px;
 }
+
 .container{
     background-color:#292f33;
 }
@@ -112,6 +113,18 @@
 }
 .jumbotron .login  {
   font-size: 40px;
+}
+.loginA {
+  height: 100px;
+}
+.loginA a {
+  line-height: 100px;
+  font-size: 50px;
+}
+.postA {
+  height: 100px;
+  line-height: 100px;
+  font-size: 30px;
 }
 
 .home{
@@ -135,4 +148,9 @@ label {
 }
 input {
   color: black;
+}
+.review {
+  height: 60px;
+  background-color: rgb(194, 194, 194);
+  margin-right: 30px;
 }

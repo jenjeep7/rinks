@@ -1,9 +1,42 @@
 <!DOCTYPE html>
-  <div ng-controller="ReviewController as rc" class="container main">
-<a href="/newReviews">Post a new review</a>
-<!-- {{rc.allReviews.review}} -->
-<div ng-repeat="review in rc.allReviews">
-{{review.review}}
+<nav class="navbar navbar-default">
+  <div class="container">
+    <ul class="nav navbar-nav">
+      <!-- <li>
+      <a href="/home">Home</a>
+    </li> -->
+    <li>
+      <a href="/rinkInfo">Rink Information</a>
+    </li>
+    <li>
+      <a href="/newReviews">Post a Review</a>
+    </li>
+    <!-- <li>
+    <a href="/registerPage">Register Here</a>
+  </li> -->
+  <li>
+    <a href="/">Logout</a>
+  </li>
+</ul>
 </div>
+</nav>
+<div class="row">
+  <a href="/newReviews" class="col-md-4 col-md-offset-4 postA">Post a new review</a>
+</div>
+<div ng-controller="ReviewController as rc">
+  <p>
+    SelectedCity = {{rc.selectedCityData.selectedCity}}
+  </p>
+  <!-- {{rc.allReviews.review}} -->
+  <div class="well">
 
+
+    <div class="row">
+
+
+      <div ng-repeat="review in rc.allReviews" class="col-md-3 review well">
+        {{review.review}}
+      </div>
+    </div>
+  </div>
 </div>

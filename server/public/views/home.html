@@ -1,4 +1,46 @@
 <!DOCTYPE html>
+<div class="col-md-8 col-md-offset-4 loginA">
+  <a href="#" data-toggle="modal" data-target="#login-modal" class="login">Login to Rinks</a>
+</div>
+
+
+<div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+  <div class="modal-dialog">
+    <div class="loginmodal-container">
+      <h2>Login to Your Account</h2><br>
+      <form action="/login" method="POST">
+        <input type="text" name="username" placeholder="Username" id="username">
+        <input type="password" name="password" id ="password" placeholder="Password">
+        <input type="submit" name="login" class="login loginmodal-submit" value="Login">
+        <div class="login-help">
+          <a href="/registerPage" data-toggle="modal" data-target="#login-modal">Register</a>
+        </div>
+      </form>
+
+
+    </div>
+  </div>
+</div>
+<!-- <nav class="navbar navbar-default">
+<div class="container">
+<ul class="nav navbar-nav">
+<li>
+<a href="/home">Home</a>
+</li>
+<li>
+<a href="/rinkInfo">Rink Information</a>
+</li>
+<li>
+<a href="/newReviews">Post a Review</a>
+</li>
+<li>
+<a href="/registerPage">Register Here</a>
+</li>
+
+</ul>
+</div>
+</nav> -->
+
 
 <div class="row main well" >
 

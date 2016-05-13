@@ -27,6 +27,7 @@ router.post('/', function(request, response){
 
     query.on('end', function(){
       response.sendStatus(200);
+      // response.redirect('/rinkInfo');
       client.end();
     });
 
@@ -34,7 +35,6 @@ router.post('/', function(request, response){
 
 
 });
-
 
 router.get('/user/:id', function(request, response) {
   response.sendFile(path.join(__dirname, '../public/views/failure.html'));

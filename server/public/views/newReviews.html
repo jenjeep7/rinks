@@ -1,16 +1,41 @@
 <!DOCTYPE html>
+<nav class="navbar navbar-default">
+  <div class="container">
+    <ul class="nav navbar-nav">
+      <!-- <li>
+        <a href="/home">Home</a>
+      </li> -->
+      <li>
+        <a href="/rinkInfo">Rink Information</a>
+      </li>
+      <li>
+        <a href="/newReviews">Post a Review</a>
+      </li>
+      <!-- <li>
+        <a href="/registerPage">Register Here</a>
+      </li> -->
+      <li>
+        <a href="/">Logout</a>
+      </li>
+    </ul>
+  </div>
+</nav>
   <body ng-controller="ReviewController" class="container main">
     <form method="POST" action="/postReview">
 
 
 <label for="review">Enter your review:</label>
-<input type="text" name="review" id="review"/>
+<textarea rows="4" cols="50" type="text" name="review" id="review"/>
 
 <label for="username">Enter your username:</label>
 <input type="text" name="username" id="username" />
 
 <label for="cold_rating">Enter cold rating 1-5</label>
 <input type="text" name="cold_rating" id="cold_rating"/>
+
+<!-- <label for="search">Search for arena:</label>
+<select ng-options="rink.city for rink in sc.rinks" ng-model="sc.selectedValue" ></select> -->
+
 <input type="submit" />
   </form>
   </body>

@@ -5,12 +5,21 @@ var app = angular.module('iceApp', ['ngRoute']);
 
 app.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider){
   $routeProvider
+
+    .when('/', {
+      templateUrl: 'views/home.html',
+
+    })
     .when('/home', {
       templateUrl: 'views/home.html',
 
     })
-    .when('/register', {
-      templateUrl: 'views/register.html',
+    .when('/success', {
+      templateUrl: 'views/success.html',
+
+    })
+    .when('/registerPage', {
+      templateUrl: 'views/registerPage.html',
     })
     .when('/newReviews', {
       templateUrl: 'views/newReviews.html',
@@ -33,7 +42,7 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
 }]);
 
 //controller for reviews
-app.controller('ReviewController', ['$http', function($http){
+app.controller('ReviewController', ['$http', 'selectedCity', function($http, selectedCity){
 
 var rc = this;
 rc.allReviews = {};
@@ -48,19 +57,19 @@ console.log("reviews was called");
   };
   rc.getReviews();
 
-
+rc.selectedCityData = selectedCity.data;
 
 }]);
 
 //Search controller
-app.controller('SearchController', ['$http', function($http){
+app.controller('SearchController', ['$http', 'selectedCity', function($http, selectedCity){
 
 
   var vm = this;
   vm.rink_info={};
 
   vm.rinks = {};
-  vm.selectedValue = null;
+  vm.selectedValue = selectedCity.data;
   //this gets rink info from the database
   vm.getData= function(){
 
@@ -77,8 +86,8 @@ app.controller('SearchController', ['$http', function($http){
 vm.getRinkInfo= function(){
   // vm.rink_info = {};
   vm.rinkDisplay= {};
-  var selectedValue= vm.selectedValue;
-  $http.get("/rink_info/" + vm.selectedValue.city).then(function(response){
+  var selectedValue= vm.selectedValue.selectedCity;
+  $http.get("/rink_info/" + selectedValue.city).then(function(response){
     console.log("received info");
 
     vm.rinkDisplay= response.data;
@@ -90,5 +99,14 @@ console.log(vm.rinkDisplay);
   });
 };
 
-
 }]);
+
+app.factory('selectedCity', function(){
+
+  var data ={selectedCity: null};
+
+  return {
+    data: data
+  };
+
+});
