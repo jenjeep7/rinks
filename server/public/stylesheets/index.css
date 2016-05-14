@@ -149,8 +149,24 @@ label {
 input {
   color: black;
 }
+textarea {
+  color: black;
+}
 .review {
   height: 60px;
   background-color: rgb(194, 194, 194);
   margin-right: 30px;
+}
+.newPost h2{
+  text-align: center;
+  margin: 20px auto;
+}
+.newPost .btn {
+  margin-bottom: 60px;
+}
+.reviewTitle {
+  background-color:rgb(42, 69, 115);
+  margin-bottom: 20px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
