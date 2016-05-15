@@ -18,26 +18,32 @@
     </ul>
   </div>
 </nav>
-<div class="container">
+<div class="container info">
+
+  <div class="reviewTitle col-sm-8 col-sm-offset-2">
 
 
-  <div class="row">
+    <h2>Get Rink Information</h2>
+  </div>
+  <!-- <div class="row well"> -->
     <div class="col-md-6 col-md-offset-3">
       <!-- <form action="/rinks" method="get"> -->
+
+<div class="form-group row">
 
 
       <label for="search">Search for arena:</label>
       <select ng-options="rink.city for rink in sc.rinks" ng-model="sc.selectedValue.selectedCity" ></select>
       <!-- {{sc.rinks}} -->
-      <br />
+    </div>
       <!-- {{sc.selectedValue}} -->
       <!-- <input type="submit" /> -->
-      <button ng-click="sc.getRinkInfo()">Get Rink Info</button>
+      <button class="btn"ng-click="sc.getRinkInfo()">Get Rink Info</button>
       <!-- </form> -->
     </div>
-  </div>
+  <!-- </div> -->
 
-  <div class="row">
+  <div class="row well info ">
     <div class="col-md-6 col-md-offset-3">
       <!-- This is where the view is populated from the search results -->
       <div ng-repeat="rink in sc.rinkDisplay">
@@ -47,7 +53,7 @@
           {{rink.address}}
           {{rink.city}},  {{rink.state}} {{rink.zip_code}}
         </p>
-        <button><a href="/reviews">Get Reviews</a></button>
+        <button class="btn "><a href="/reviews">Get Reviews</a></button>
 
       </div>
     </div>
